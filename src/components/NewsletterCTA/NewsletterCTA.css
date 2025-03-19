@@ -1,0 +1,96 @@
+/* src/components/NewsletterCTA/NewsletterCTA.css */
+.newsletter-cta-section--blue { /* Styles for blue version of CTA section */
+    background-color: #fff; /* White background for contrast */
+    padding: 90px 0; /* Increased vertical padding for a more prominent section */
+    text-align: center; /* Center align content */
+}
+
+.newsletter-cta-container--blue { /* Styles for blue version of CTA container */
+    max-width: 1000px; /* Further reduced max-width to better fit content */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.newsletter-cta-title--blue { /* Styles for blue version of CTA title */
+    font-size: 3.5rem; /* Even larger title for stronger impact */
+    color: #222; /* Darker title color - keep dark for white background */
+    margin-bottom: 20px; /* Reduced spacing below title */
+    line-height: 1.4; /* Improved line height for even larger title */
+    font-weight: bold; /* Bold title font weight */
+}
+
+.newsletter-cta-subtitle--blue { /* Styles for blue version of CTA subtitle */
+    font-size: 1.3rem; /* Slightly larger subtitle font */
+    color: #555; /* Darker subtitle color - keep dark for white background */
+    margin-bottom: 40px; /* Increased spacing below subtitle */
+    line-height: 1.7; /* Improved line height for subtitle */
+}
+
+.newsletter-cta-subtitle .newsletter-cta-highlight { /* Styles for highlighted part of subtitle */
+    font-weight: bold;
+    color: #c00; /* Red color for discount highlight */
+    font-size: 1.3rem; /* Slightly larger size for highlight */
+}
+
+.newsletter-cta-button--blue { /* Styles for blue version of CTA button */
+    background-color: #87cefa; /* Light blue button color - as per the second image */
+    color: #fff; /* White text color for button */
+    font-size: 1.3rem; /* Larger button text size */
+    padding: 18px 45px; /* Increased button padding */
+    border: none;
+    border-radius: 10px; /* Less rounded button - more rectangular, as in second image */
+    cursor: pointer;
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.2); /* Shadow for button */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    font-weight: bold; /* Bold button text */
+    letter-spacing: 0.06em; /* Slight letter spacing for button text */
+    margin-top: 40px; /* Increased margin above button for spacing */
+    animation: pulse-glow-enhanced 2s infinite; /* Changed to enhanced pulse animation */ /* animation: pulse-glow 2.5s infinite; */
+}
+
+@keyframes pulse-glow-enhanced { /* Enhanced pulse-glow animation keyframes */
+    0% {
+        box-shadow: 0 0 0 0 rgba(72, 161, 252, 0.6); /* Increased initial glow opacity */ /* rgba(72, 161, 252, 0.4); */
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 0 15px rgba(72, 161, 252, 0); /* Increased glow radius */ /* 10px */
+        transform: scale(1.06); /* Increased scale for more noticeable pulse */ /* scale(1.03); */
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(72, 161, 252, 0);
+        transform: scale(1);
+    }
+}
+
+
+.newsletter-cta-button--blue:hover {
+    background-color: #5dade2; /* Slightly darker blue on hover */
+    transform: scale(1.06); /* Slight scale up on hover */
+    box-shadow: 0 9px 22px rgba(0, 0, 0, 0.25); /* More prominent shadow on hover */
+}
+
+
+/* Responsiveness for Newsletter CTA Section */
+@media (max-width: 768px) { /* Mobile breakpoint */
+    .newsletter-cta-section--blue {
+        padding: 50px 0; /* Adjust vertical padding on mobile */
+        text-align: center; /* Center text on mobile */
+    }
+    .newsletter-cta-container--blue {
+        padding: 0 15px; /* Adjust horizontal padding on mobile container */
+    }
+    .newsletter-cta-title--blue {
+        font-size: 2.2rem; /* Smaller title font size on mobile */
+        margin-bottom: 15px; /* Reduced margin below title on mobile */
+    }
+    .newsletter-cta-subtitle--blue {
+        font-size: 1.1rem; /* Subtitle font size remains same on mobile */
+        margin-bottom: 30px; /* Spacing below subtitle remains same on mobile */
+    }
+    .newsletter-cta-button--blue {
+        font-size: 1.1rem; /* Smaller button text size on mobile */
+        padding: 12px 30px; /* Smaller button padding on mobile */
+        border-radius: 8px; /* Slightly less rounded button on mobile */
+    }
+}

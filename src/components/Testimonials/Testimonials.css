@@ -1,0 +1,145 @@
+/* src/components/Testimonials/Testimonials.css */
+.testimonials-section {
+    padding: 80px 0; /* Increased padding for more visual space */
+    background-color: #11b2ee; /* Light grey background to match image */
+    text-align: center; /* Center section content */
+}
+
+.testimonials-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.testimonials-title {
+    font-size: 2.5rem; /* Larger title for testimonials section */
+    color: #333;
+    margin-bottom: 60px; /* Increased margin below title */
+}
+
+.testimonials-grid {
+    display: grid; /* Use grid layout for testimonials */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid columns */
+    gap: 30px; /* Spacing between testimonial cards */
+    justify-items: center; /* Center items in grid cells */
+}
+.testimonial-card {
+    background-color: #fff; /* White background for cards */
+    border-radius: 25px; /* Rounded corners for cards - adjust to match image */
+    padding: 30px; /* Padding inside cards - adjust to match image */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Increased shadow size and opacity */
+    text-align: center; /* Center text within card */
+    max-width: 400px; /* Maximum width of the card - adjust as needed */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Smooth transition for hover effect - ADDED */
+}
+
+
+.testimonial-card:hover {
+    transform: translateY(-8px); /* Card lift on hover - ADDED */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Slightly more prominent shadow on hover - ADDED */
+}
+
+
+.testimonial-card__header {
+    display: flex;
+    flex-direction: column; /* Stack avatar and info vertically */
+    align-items: center; /* Center items horizontally in header */
+    margin-bottom: 25px; /* Spacing below header section */
+}
+
+.testimonial-card__avatar {
+    width: 100px; /* Avatar size - adjust to match image */
+    height: 100px;
+    border-radius: 50%; /* Make avatar circular */
+    margin-bottom: 15px; /* Spacing below avatar */
+    object-fit: cover; /* Ensure image covers the circular area */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for avatar */
+    transition: transform 0.3s ease-out; /* Smooth transition for avatar hover - ADDED */
+}
+
+.testimonial-card__avatar:hover {
+    transform: scale(1.1); /* Scale up avatar on card hover - ADDED */
+}
+
+.testimonial-card__info {
+    /* Styles for name and role container (currently not needed as they are stacked) */
+}
+
+.testimonial-card__name {
+    font-size: 1.3rem; /* Name font size - adjust to match image */
+    font-weight: bold;
+    color: #333; /* Dark text color for name */
+    margin-bottom: 5px; /* Spacing below name */
+}
+
+.testimonial-card__role {
+    font-size: 0.9rem; /* Role font size - adjust to match image */
+    color: #777; /* Grey text color for role */
+    margin-bottom: 20px; /* Spacing below role */
+}
+
+.testimonial-card__quote {
+    font-style: italic; /* Italic style for quote text */
+    color: #555; /* Darker grey color for quote text */
+    margin-bottom: 25px; /* Spacing below quote */
+    line-height: 1.6; /* Improve line height for quote */
+}
+
+.testimonial-card__rating {
+    display: flex;
+    justify-content: center; /* Center stars horizontally */
+    gap: 5px; /* Spacing between stars */
+}
+
+.testimonial-card__star {
+    font-size: 1rem; /* Star icon size - adjust to match image */
+    color: #ffc107; /* Gold/Amber color for stars - adjust to match image */
+    opacity: 0.5; /* Default opacity for inactive stars */
+    transition: transform 0.3s ease-out; /* Smooth transition for star hover - ADDED */
+}
+
+.testimonial-card__star:hover {
+    transform: rotate(15deg) scale(1.2); /* Rotate and scale up star on card hover - ADDED */
+}
+
+
+/* Responsiveness for Testimonials Section */
+@media (max-width: 768px) { /* Mobile breakpoint */
+    .testimonials-section {
+        padding: 60px 0; /* Adjust vertical padding on mobile */ /* Original: 80px 0; */
+    }
+    .testimonials-title {
+        font-size: 2rem; /* Smaller title on mobile */ /* Original: 2.5rem; */
+        margin-bottom: 40px; /* Reduced margin below title on mobile */ /* Original: 60px 0; */
+    }
+    .testimonials-grid {
+        grid-template-columns: 1fr; /* Single column grid on mobile */
+        gap: 40px; /* Increased gap between cards on mobile for vertical spacing */ /* Original: 30px; */
+    }
+    .testimonial-card {
+        padding: 25px; /* Slightly reduced padding on mobile cards */ /* Original: 30px; */
+        max-width: 95%; /* Allow cards to take more width on mobile */ /* Original: 400px; */
+    }
+    .testimonial-card__avatar {
+        width: 80px; /* Smaller avatar size on mobile */ /* Original: 100px; */
+        height: 80px; /* Smaller avatar size on mobile */ /* Original: 100px; */
+        margin-bottom: 10px; /* Reduced spacing below avatar on mobile */ /* Original: 15px; */
+    }
+    .testimonial-card__name {
+        font-size: 1.2rem; /* Smaller name font size on mobile */ /* Original: 1.3rem; */
+    }
+    .testimonial-card__role {
+        font-size: 0.85rem; /* Smaller role font size on mobile */ /* Original: 0.9rem; */
+        margin-bottom: 15px; /* Reduced spacing below role on mobile */ /* Original: 20px; */
+    }
+    .testimonial-card__quote {
+        font-size: 1rem; /* Smaller quote font size on mobile */ /* Original: 1.1rem; */
+        margin-bottom: 20px; /* Reduced spacing below quote on mobile */ /* Original: 25px; */
+    }
+    .testimonial-card__rating {
+        gap: 3px; /* Reduced spacing between stars on mobile */ /* Original: 5px; */
+    }
+    .testimonial-card__star {
+        font-size: 0.9rem; /* Smaller star icon size on mobile */ /* Original: 1rem; */
+    }
+}

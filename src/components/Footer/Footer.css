@@ -1,0 +1,191 @@
+/* src/components/Footer/Footer.css */
+.footer {
+    background-color: #222; /* Dark background color */
+    color: #eee; /* Light text color */
+    padding-top: 80px; /* Top padding for footer content */
+    overflow: hidden; /* Garante que as animações internas não causem scroll horizontal */
+}
+
+.footer__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+}
+
+.footer__column {
+    flex: 1; /* Equal flex for columns */
+    min-width: 200px; /* Minimum width for columns */
+    margin-bottom: 30px; /* Spacing below columns in mobile view */
+    text-align: left; /* Align text to left in columns */
+}
+
+.footer__column--about {
+    max-width: 300px; /* Limit width of about column */
+    margin-right: 100px;
+}
+
+.footer__logo-link {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.footer__logo-image {
+    height: 40px; /* Adjust logo height as needed */
+    width: auto;
+    display: block;
+}
+
+.footer__description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.footer__social-icons {
+    display: flex;
+    gap: 10px; /* Spacing between social icons */
+}
+
+.footer__social-icon-link {
+    color: #eee; /* Light color for social icons */
+    font-size: 1.3rem; /* Size of social icons */
+    transition: color 0.3s ease, transform 0.3s ease; /* Animação na cor e escala */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+}
+
+.footer__social-icon-link:hover {
+    color: #fff; /* White color on hover */
+    transform: scale(1.1) rotate(10deg); /* Efeito de "zoom" e rotação ao passar o mouse */
+}
+
+
+.footer__column-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff; /* White color for column titles */
+    margin-bottom: 15px;
+    text-transform: uppercase; /* Uppercase column titles */
+}
+
+.footer__list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__link, .footer__contact-item {
+    display: block; /* Make links/contact items block level */
+    color: #ccc; /* Light grey color for links and contact info */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    margin-bottom: 12px; /* Aumentei o margin-bottom para espaçamento em "Serviços" e outros */
+    font-size: 0.9rem;
+    transition: color 0.3s ease; /* Transição suave na cor */
+    display: flex; /* Align icon and text in contact items */
+    align-items: center; /* Vertically align icon and text */
+    position: relative; /* Necessário para o sublinhado animado */
+}
+
+.footer__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Ajusta a posição do sublinhado */
+    width: 0;
+    height: 2px;
+    background-color: #87cefa; /* Cor do sublinhado - pode ajustar */
+    transition: width 0.3s ease; /* Animação da largura do sublinhado */
+}
+
+.footer__link:hover::after {
+    width: 100%; /* Sublinhado aparece por completo no hover */
+}
+
+
+.footer__link:hover, .footer__contact-item:hover {
+    color: #fff; /* White color on hover */
+}
+
+.footer__contact-item {
+    margin-bottom: 15px; /* More spacing for contact items */
+}
+
+.footer__contact-icon {
+    font-size: 1.1rem; /* Size of contact icons */
+    margin-right: 8px; /* Spacing between icon and text */
+    color: #87cefa; /* Light blue color for contact icons - you can adjust */
+}
+
+
+.footer__bottom-bar {
+    background-color: #111; /* Even darker bottom bar */
+    padding: 20px 0;
+    text-align: center; /* Center copyright and developer text */
+    font-size: 0.8rem; /* Smaller font size for bottom bar text */
+    color: #aaa; /* Lighter text color for bottom bar */
+}
+
+.footer__bottom-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between; /* Space between copyright and developer text */
+    align-items: center; /* Vertically align bottom bar text */
+    flex-wrap: wrap; /* Allow text to wrap on smaller screens */
+    gap: 10px; /* Spacing between text elements when wrapped */
+}
+
+.footer__developer {
+    text-align: right; /* Align developer text to the right */
+    opacity: 0; /* Começa invisível */
+    transform: translateY(20px); /* Começa um pouco abaixo */
+    animation: fadeInUpDeveloper 1.2s ease-out forwards 0.5s; /* Animação com atraso */
+}
+
+.footer__developer-link {
+    color: #aaa; /* Cor inicial igual ao texto pai */
+    text-decoration: none; /* Remove o sublinhado do link do desenvolvedor */
+    transition: color 0.3s ease; /* Transição de cor suave */
+}
+
+.footer__developer-link:hover {
+    color: #fff; /* Cor quando passa o mouse */
+}
+
+
+/* Animação "fadeInUp" para o desenvolvedor */
+@keyframes fadeInUpDeveloper {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Responsiveness for Footer Section */
+@media (max-width: 768px) { /* Mobile breakpoint */
+    .footer {
+        padding-top: 50px; /* Adjust top padding on mobile */
+    }
+    .footer__container {
+        flex-direction: column; /* Stack columns vertically on mobile */
+        text-align: center; /* Center text in columns on mobile */
+    }
+    .footer__column {
+        max-width: 100%; /* Allow full width for columns on mobile */
+        text-align: center; /* Re-center text in columns for mobile */
+        margin-bottom: 40px; /* Increased spacing between columns on mobile */
+    }
+    .footer__column--about {
+        max-width: 100%; /* Full width for about column on mobile */
+    }
+    .footer__social-icons {
+        justify-content: center; /* Center social icons on mobile */
+    }
+     .footer__developer {
+        text-align: center; /* Center developer text on mobile */
+        animation-delay: 0s; /* Remove delay no mobile para ser mais responsivo */
+    }
+}

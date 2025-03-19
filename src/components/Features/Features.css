@@ -1,0 +1,85 @@
+/* src/components/Features/Features.css */
+.features-section {
+    background-color: #11b2ee; /* Updated background color to #d9eaab - a light yellow-green */ /* Original: #e6f7eb; #b0d44d; #f8f9fa; */
+    /* max-height: 400px; Example of max-height if needed, adjust value */
+    overflow: hidden; /* To contain icon animations */
+}
+
+.features-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex; /* Display features in a row */
+    justify-content: space-around; /* Distribute space evenly */
+    align-items: center; /* Vertically align items in the container */
+    text-align: center; /* Center text within feature items */
+}
+
+.feature-item {
+    flex: 1; /* Allow items to grow and fill space equally */
+    padding: 20px;
+    max-width: 250px; /* Limit max width of each feature item */
+}
+
+.feature-item__icon {
+    font-size: 2.5rem; /* Size of the icon */
+     /* Keep the blue icon color */ /* Original: #5dade2; */
+    margin-bottom: 15px;
+    transition: transform 0.5s ease-out, color 0.3s ease-in-out; /* Enhanced transition for smoother animation */
+}
+
+.feature-item__icon:hover {
+    transform: translateY(-8px) scale(1.2); /* Lift and scale up icon on hover for more prominent effect */ /* Original: scale(1.1); */
+    color: #b0d44d; /* Slightly brighter blue on hover */
+}
+
+.feature-item__title {
+    font-size: 1.1rem; /* Slightly smaller title */ /* Original: 1.2rem; */
+    color: #495057; /* Dark grey text for title - more subtle than #333 */ /* Original: #333; */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.feature-item__description {
+    font-size: 0.9rem; /* Slightly smaller description */ /* Original: 1rem; */
+    color: #6c757d; /* Medium grey text for description - more subtle than #555 */ /* Original: #555; */
+    line-height: 1.4; /* Improve description readability */
+}
+
+
+/* Responsiveness for Features Section */
+@media (max-width: 960px) { /* Breakpoint for medium screens - adjust as needed */
+    .features-container {
+        flex-wrap: wrap; /* Wrap feature items to the next line on smaller screens */
+        justify-content: center; /* Center items when wrapped */
+    }
+    .feature-item {
+        max-width: 300px; /* Allow more width for wrapped items */
+        margin-bottom: 30px; /* Add vertical spacing between wrapped items */
+    }
+}
+
+
+@media (max-width: 768px) { /* Mobile breakpoint */
+    .features-section {
+        padding: 30px 0; /* Even less padding on mobile */ /* Original: 40px 0; */
+    }
+    .features-container {
+        padding: 0 15px; /* Adjust container padding on mobile */
+    }
+    .feature-item {
+        max-width: 100%; /* Full width on mobile */
+        padding: 15px; /* Less padding on mobile items */ /* Original: 20px; */
+        margin-bottom: 20px;
+    }
+    .feature-item__icon {
+        font-size: 2rem; /* Smaller icon on mobile */
+        margin-bottom: 10px;
+    }
+    .feature-item__title {
+        font-size: 1rem; /* Even smaller title on mobile */ /* Original: 1.1rem; */
+    }
+    .feature-item__description {
+        font-size: 0.9rem; /* Description size remains same on mobile */ /* Original: 0.95rem; */
+    }
+}

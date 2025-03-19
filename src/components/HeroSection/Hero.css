@@ -1,0 +1,171 @@
+/* src/components/Hero/Hero.css */
+/* Estilos para a Hero Section Simplificada (estrutura da imagem) */
+
+.hero {
+    /* background-color: #e0e0e0;  Removed background-color as it's set dynamically in JSX */
+    /* padding: 80px 0;  Removed padding from here, can adjust if needed */
+    overflow: hidden;
+    height: 600px; /* Fixed height for Hero section - Adjust this value as needed */
+    /* background-color: transparent; !* Set to transparent here as fallback if dynamic style fails *! */
+    /* background-image: radial-gradient(at top right, #409EFF00 0%, #000000E3 60%); !* Radial gradient moved to inline style in JSX *! */
+    /* opacity: .8; !* Opacity moved to inline style in JSX *! */
+    transition: background-image 1s ease-in-out, opacity 0.3s; /* Smoother background-image transition - 1s duration */
+}
+
+.hero__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%; /* Make container take full height of hero */
+}
+
+.hero__content--simple {
+    text-align: left;
+    padding: 80px 20px;
+    max-width: 600px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards 0.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.hero__title--simple {
+    font-size: 3rem;
+    color: #11b2ee;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    min-height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.hero__title--animate-out {
+    opacity: 0;
+}
+
+.hero__title--animate-in {
+    opacity: 1;
+}
+
+.hero__subtitle--simple {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeInSubtitle 1s ease-out forwards 1s;
+}
+
+@keyframes fadeInSubtitle {
+    to {
+        opacity: 1;
+    }
+}
+
+.hero__button--simple {
+    background-color: #b0d44d;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInButton 1s ease-out forwards 1.5s, pulse-glow 2s infinite;
+    transform: translateY(20px);
+    box-shadow: 0 0 0 rgba(176, 212, 77, 0.4);
+}
+
+@keyframes fadeInButton {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(176, 212, 77, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(176, 212, 77, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(176, 212, 77, 0);
+    }
+}
+
+
+.hero__button--simple:hover {
+    background-color: #94b33c;
+    transform: scale(1.07);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Responsiveness for Hero Section */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 0;
+        height: auto; /* Reset fixed height on mobile for content to dictate height */
+    }
+    .hero__container {
+        padding-top: 60px; /* Add padding to container to keep content within viewport */
+        padding-bottom: 60px;
+        align-items: flex-start; /* Align items to start at the top in mobile */
+        justify-content: center; /* Center content in mobile */
+        display: block; /* Switch to block display for mobile layout */
+        height: auto; /* Reset container height to auto for mobile */
+    }
+    .hero__content--simple {
+        padding: 20px; /* Adjust padding for mobile content */
+        max-width: 100%; /* Content takes full width on mobile */
+        text-align: center; /* Center align text in mobile view */
+    }
+    .hero__title--simple {
+        font-size: 2rem;
+        min-height: auto;
+        display: block; /* Reset to block display for mobile */
+        align-items: flex-start; /* Reset alignment for mobile */
+        justify-content: flex-start; /* Reset justification for mobile */
+        color: #11b2ee;
+    }
+    .hero__subtitle--simple {
+        font-size: 1rem;
+    }
+    .hero__button--simple {
+        font-size: 1.1rem;
+        padding: 12px 25px;
+        animation: fadeInButtonMobile 1s ease-out forwards 1.5s;
+        transform: translateY(20px);
+        animation-iteration-count: 1;
+        box-shadow: none;
+    }
+
+    @keyframes fadeInButtonMobile {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .hero__button--simple:hover {
+        transform: scale(1.03);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .hero__container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+}

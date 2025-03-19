@@ -1,0 +1,187 @@
+/* src/components/Header/Header.css */
+.header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    position: relative; /* Garante o posicionamento correto do menu mobile */
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header__logo-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.header__logo-image {
+    height: 40px;
+    display: block;
+}
+
+.header__menu-toggle {
+    background: none;
+    border: none;
+    color: #48a1fc;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none; /* Oculto em telas maiores por padrão */
+}
+
+.header__nav {
+    display: flex; /* Exibe a navegação em telas maiores */
+    transition: transform 0.3s ease-out;
+}
+
+.header__nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.header__nav-item {
+    margin-left: 25px;
+}
+
+.header__nav-link {
+    text-decoration: none;
+    color: #48a1fc;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.header__nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #48a1fc;
+    transition: width 0.3s ease;
+}
+
+.header__nav-link:hover {
+    color: #accc45;
+}
+
+.header__nav-link:hover::after {
+    width: 100%;
+}
+
+
+.header__actions {
+    display: flex;
+    align-items: center;
+}
+
+.header__whatsapp-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #25D366;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    font-size: 2rem;
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    animation: pulse-whatsapp 2s infinite;
+    transition: transform 0.3s ease;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+}
+
+.header__whatsapp-icon:hover {
+    transform: scale(1.1);
+}
+
+.header__whatsapp-icon svg {
+    font-size: 1.5em;
+}
+
+@keyframes pulse-whatsapp {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Media Query para telas menores (ex: tablets e celulares) */
+@media (max-width: 768px) {
+    .header__container {
+        flex-direction: column; /* Empilha os elementos verticalmente no container */
+        align-items: flex-start; /* Alinha à esquerda no mobile */
+    }
+
+    .header__whatsapp-icon{
+        display: none;
+    }
+
+    .header__logo-link {
+        margin-bottom: 15px; /* Espaço abaixo da logo no mobile */
+    }
+
+    .header__nav {
+        display: none; /* Oculta a navegação desktop no mobile inicialmente */
+        position: static; /* Remove o posicionamento absoluto/relativo para o mobile */
+        width: 100%; /* Ocupa a largura total */
+        box-shadow: none; /* Remove a sombra do menu mobile */
+        padding: 0; /* Remove padding do menu mobile */
+        transform: none; /* Reseta a transformação */
+    }
+
+    .header__nav.header__nav--open {
+        display: block; /* Exibe o menu mobile quando a classe --open está presente */
+    }
+
+
+    .header__nav-list {
+        flex-direction: column; /* Organiza os itens da lista em coluna */
+        align-items: flex-start; /* Alinha os itens à esquerda */
+        width: 100%; /* Garante que a lista ocupe a largura total do menu */
+    }
+
+    .header__nav-item {
+        margin-left: 0; /* Remove margem esquerda dos itens */
+        margin-bottom: 15px; /* Adiciona espaço vertical entre os itens */
+        width: 100%; /* Garante que cada item ocupe a largura total da lista */
+    }
+
+    .header__nav-link {
+        display: block; /* Transforma links em elementos de bloco para ocupar a largura total */
+        padding: 10px 0; /* Adiciona padding vertical aos links para melhor toque/clique */
+    }
+
+
+    .header__menu-toggle {
+        display: block; /* Exibe o botão do menu hamburger em telas menores */
+        position: absolute; /* Posiciona o botão no canto superior direito */
+        top: 20px;
+        right: 20px;
+    }
+
+    .header__actions {
+        position: absolute; /* Posiciona o icone do whatsapp no canto superior esquerdo */
+        top: 20px;
+        left: 20px;
+    }
+}
