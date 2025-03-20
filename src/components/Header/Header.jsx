@@ -29,17 +29,17 @@ function Header() {
                             </a>
                         </li>
                         <li className="header__nav-item">
-                            <a href="/sobre" className="header__nav-link">
+                            <a href="#WhatsAppCTA" className="header__nav-link">
                                 Sobre
                             </a>
                         </li>
                         <li className="header__nav-item">
-                            <a href="/servicos" className="header__nav-link">
+                            <a href="#servicos" className="header__nav-link">
                                 Serviço
                             </a>
                         </li>
                         <li className="header__nav-item">
-                            <a href="/contato" className="header__nav-link">
+                            <a href="#WhatsappCTA" className="header__nav-link">
                                 Contato
                             </a>
                         </li>
