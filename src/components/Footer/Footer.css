@@ -199,9 +199,11 @@
             align-items: center;
     }
 
-    .footer__bottom-container{
+    .footer__bottom-container {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
 }

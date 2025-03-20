@@ -4,7 +4,7 @@ import './WhatsAppCTA.css';
 import { FaWhatsapp } from 'react-icons/fa';
 
 function WhatsAppCTA() {
-    const whatsappNumber = '5548991871643'; // Add '55' for Brazil country code
+   
 
     return (
         <section id="WhatsAppCTA" className="whatsapp-cta-section whatsapp-cta-section--split">
@@ -25,7 +25,7 @@ function WhatsAppCTA() {
                         <li className="whatsapp-cta-benefit-item">✅ Serviço profissional e especializado.</li>
                     </ul>
                     <a
-                        href={`https://wa.me/${whatsappNumber}`}
+                        href={`https://wa.me/5548991871643`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="whatsapp-cta-link whatsapp-cta-link--centered whatsapp-cta-link--animated"

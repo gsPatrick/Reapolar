@@ -46,7 +46,7 @@ function Header() {
                     </ul>
                 </nav>
                 <div className="header__actions">
-                    <a href="https://wa.me/SEU_NUMERO_WHATSAPP" // Substitua pelo seu número
+                    <a href="https://wa.me/5548991871643" // Substitua pelo seu número
                        target="_blank"
                        rel="noopener noreferrer"
                        className="header__whatsapp-icon"

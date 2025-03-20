@@ -19,7 +19,7 @@ function Footer() {
                     <div className="footer__social-icons">
                         <a href="https://www.facebook.com/Reparolar" className="footer__social-icon-link"><FaFacebook /></a> {/* Updated Facebook link */}
                         <a href="https://www.instagram.com/reparo_lar/" className="footer__social-icon-link"><FaInstagram /></a> {/* Updated Instagram link */}
-                        <a href="https://api.whatsapp.com/resolve/?deeplink=%2F" className="footer__social-icon-link"><FaWhatsapp /></a> {/* Updated Instagram link */}
+                        <a href="https://wa.me/5548991871643" className="footer__social-icon-link"><FaWhatsapp /></a> {/* Updated Instagram link */}
 
                     </div>
                 </div>

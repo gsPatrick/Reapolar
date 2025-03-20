@@ -49,7 +49,7 @@
 
 .whatsapp-cta-label { /* Styles for "BENEFÍCIOS" label - changed to BENEFÍCIOS IMPERDÍVEIS */
     font-size: 1rem; /* Slightly larger label font */
-    color: #e67e22; /* Orange-ish color for label - adjust if needed */
+    color: #94b33c;/* Orange-ish color for label - adjust if needed */
     text-transform: uppercase; /* Uppercase text */
     font-weight: 700; /* Extra bold font weight for label */
     margin-bottom: 12px; /* Increased Spacing below label */
@@ -207,7 +207,7 @@
     }
 
     .whatsapp-cta-title--centered {
-        font-size: 1.6rem; /* Titulo ainda menor no mobile */
+        font-size: 1.4em; /* Titulo ainda menor no mobile */
         margin-bottom: 10px; /* Mais reduzido margin abaixo do titulo no mobile */
         text-align: center; /* Center title on mobile */
     }
