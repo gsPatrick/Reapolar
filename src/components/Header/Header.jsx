@@ -39,7 +39,7 @@ function Header() {
                             </a>
                         </li>
                         <li className="header__nav-item">
-                            <a href="#WhatsappCTA" className="header__nav-link">
+                            <a href="#WhatsAppCTA" className="header__nav-link">
                                 Contato
                             </a>
                         </li>

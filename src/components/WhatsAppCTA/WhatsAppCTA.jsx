@@ -7,7 +7,7 @@ function WhatsAppCTA() {
     const whatsappNumber = '5548991871643'; // Add '55' for Brazil country code
 
     return (
-        <section className="whatsapp-cta-section whatsapp-cta-section--split">
+        <section id="WhatsAppCTA" className="whatsapp-cta-section whatsapp-cta-section--split">
             <div className="container whatsapp-cta-container whatsapp-cta-container--split">
                 <div className="whatsapp-cta-image-container">
                     <img

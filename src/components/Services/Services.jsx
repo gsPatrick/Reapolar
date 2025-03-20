@@ -47,7 +47,8 @@ function Services() {
 
 
     return (
-        <section id="servicos" className="services-section"> {/* ADICIONEI O ID AQUI */}            <div className="container services-container">
+        <section id="servicos" className="services-section"> {/* ADICIONEI O ID AQUI */}
+                    <div className="container services-container">
                 <h2 className="services-title">Nosso Serviço</h2>
                 <div className="services-carousel services-carousel--slideshow">
                     {visibleServices.map((service, index) => (
