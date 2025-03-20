@@ -11,7 +11,7 @@ function WhatsAppCTA() {
             <div className="container whatsapp-cta-container whatsapp-cta-container--split">
                 <div className="whatsapp-cta-image-container">
                     <img
-                        src="https://reparolar.com.br/wp-content/uploads/2022/10/IMG_20201229_132506_1.webp" // Reduced image size to 600x600
+                        src="https://i.imgur.com/Qw50xhh.jpeg" // Reduced image size to 600x600
                         alt="Imagem Chamada para Ação"
                         className="whatsapp-cta-image"
                     />

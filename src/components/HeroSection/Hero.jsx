@@ -12,10 +12,10 @@ function Hero() {
         "Sua Casa Mais Limpa e Saudável."
     ];
     const backgroundImages = [
-        "https://reparolar.com.br/wp-content/uploads/2022/11/caca-vazamento.webp",
-        "https://reparolar.com.br/wp-content/uploads/2022/11/caca-vazamento-oculto.webp",
-        "https://reparolar.com.br/wp-content/uploads/2022/11/infiltracao.webp",
-        "https://reparolar.com.br/wp-content/uploads/2022/11/tubulacao-de-quente_1.webp"
+        "https://images.unsplash.com/photo-1686178827149-6d55c72d81df?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://drywashlavanderia.com.br/wp-content/uploads/2022/10/CURIOSIDADES-SOBRE-HIGIENIZAC%CC%A7A%CC%83O-DE-ESTOFADOS.jpg",
+        "https://lavalimper.com.br/wp-content/uploads/2020/09/lavar-impermeabilizacao-limpeza-sofa-lavar-tapete-morumbi-interlagos-zona-sul-topo-home.jpg",
+        "https://drywashlavanderia.com.br/wp-content/uploads/2023/12/Como-limpar-sofa-muito-sujo.jpg"
     ];
 
     const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
@@ -61,8 +61,12 @@ function Hero() {
                         {rotatingTitles[currentTitleIndex]}
                     </h1>
                     <p className="hero__subtitle hero__subtitle--simple">Não deixe seus estofados perderem a elegância. Resolva hoje mesmo!</p>
-                    <button className="hero__button hero__button--simple">Veja o Desconto!</button>
-                </div>
+                    <button 
+  className="hero__button hero__button--simple" 
+  onClick={() => window.location.href = '#NewsLetterCTA'}
+>
+  Veja o Desconto!
+</button>                </div>
             </div>
         </section>
     );
