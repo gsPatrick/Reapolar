@@ -34,7 +34,7 @@
 }
 
 .hero__title--simple {
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: #11b2ee;
     margin-bottom: 20px;
     line-height: 1.2;
@@ -55,7 +55,7 @@
 }
 
 .hero__subtitle--simple {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #777;
     margin-bottom: 30px;
     opacity: 0;
