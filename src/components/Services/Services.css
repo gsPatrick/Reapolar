@@ -1,15 +1,15 @@
 /* src/components/Services/Services.css */
 .services-section {
     padding: 60px 0;
-    background-color: #f9f9f9; /* Cor de fundo levemente cinza */
-    height: auto; /* Changed from 100vh to auto - This is the key change */
+    background-color: #f9f9f9; /* Light gray background color */
+    height: auto; /* Changed from 100vh to auto */
 }
 
 .services-container {
-    max-width: 1400px; /* Largura máxima do container */
+    max-width: 1400px; /* Maximum container width */
     margin: 0 auto;
     padding: 0 20px;
-    text-align: center; /* Centralizar título e carousel */
+    text-align: center; /* Center title and carousel */
 }
 
 .services-title {
@@ -18,21 +18,21 @@
     margin-bottom: 40px;
 }
 
+/* src/components/Services/Services.css */
 .services-carousel {
-    display: flex; /* Exibir cards horizontalmente */
-    align-items: center;
-    /* overflow-x: auto;  Removed overflow for slideshow */
+    display: flex; /* Display cards horizontally */
+    align-items: stretch; /* ADICIONE ESTA LINHA PARA IGUALAR A ALTURA DOS CARDS */
+    align-items: center; /* REMOVA ESTA LINHA PARA O ALINHAMENTO PADRÃO STRETCH FUNCIONAR */
     gap: 40px; /* Slightly reduced gap between cards */
-    padding-bottom: 20px; /* Espaço para a barra de rolagem não sobrepor a paginação */
-    /* scroll-snap-type: x mandatory;  Removed scroll snap for slideshow */
-    -webkit-overflow-scrolling: touch; /* Para rolagem suave no iOS */
-    justify-content: center; /* Align items to the start for sliding effect */ /* Center the carousel horizontally */ /* Removed justify-content: center; */
-    padding-left: 20px; /* Add some padding to the left */
-    padding-right: 20px; /* Add some padding to the right */
+    padding-bottom: 20px; /* Space for pagination to not overlap */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    justify-content: center; /* Center the carousel horizontally */
+    padding-left: 20px;
+    padding-right: 20px;
     overflow: hidden; /* Clip overflowing cards for slideshow effect */
-    /* width: calc(3 * (320px + 15px) );  */
     margin: 0 auto; /* Center the carousel container itself */
-    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding animation */ /* overflow: hidden; */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding animation */
+    height: 100%;
 }
 
 .services-carousel--slideshow { /* Styles specifically for slideshow carousel */
@@ -41,47 +41,48 @@
 
 
 .services-card--cta { /* Styles for CTA card variation */
-    flex: 0 0 auto; /* Não crescer, não encolher, tamanho automático */
-    width: 320px; /* Adjusted card width for CTA style */ /* Original width: calc(20% - 12px); */
+    flex: 0 0 auto; /* Do not grow, do not shrink, auto size */
+    width: 320px; /* Adjusted card width for CTA style */
     max-width: 320px; /* Max width for CTA card */
     border-radius: 20px; /* More rounded corners for CTA card */
-    background-color: #f0f9e7; /* Fundo branco dos cards */
+    background-color: #f0f9e7; /* White card background */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow for CTA card */
-    overflow: hidden; /* Para garantir que o border-radius funcione com a imagem */
-    scroll-snap-align: start; /* Alinhar cards ao início do container no scroll snapping */
-    text-align: center; /* Center text in CTA card */ /* Original: left */
+    overflow: hidden; /* Ensure border-radius works with image */
+    scroll-snap-align: start; /* Align cards to start of container on scroll snap */
+    text-align: center; /* Center text in CTA card */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effect */
-    margin-left: 0; /* Reset margins that might be set for other layouts */
+    margin-left: 0; /* Reset margins */
     margin-right: 0;
     margin-top: 10px;
+  
 }
 
 .services-card--cta:hover {
     transform: translateY(-10px); /* Card lift on hover */
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
-    /* border-color: #accc45; Border color removed for CTA style */
 }
 
 .services-card__image--cta { /* Styles for CTA card image variation */
-    display: block; /* Evitar espaço extra abaixo da imagem */
+    display: block; /* Prevent extra space below image */
     width: 100%;
     height: auto;
-    border-radius: 20px 20px 0 0; /* Arredondar apenas o topo do card */
-    aspect-ratio: 16/9; /* Example aspect ratio for image - adjust as needed */
-    object-fit: cover; /* Ensure image covers the area, cropping if needed */
+    border-radius: 20px 20px 0 0; /* Round only top of card */
+    aspect-ratio: 16/9; /* Image aspect ratio */
+    object-fit: cover; /* Ensure image covers area */
 }
 
 .services-card__content {
     padding: 20px;
-    flex-grow: 1; /* Permite que o conteúdo cresça verticalmente */
+    flex-grow: 1; /* Allow content to grow vertically */
+    height: 100%; /* ADICIONE ESTA LINHA */
 }
 
 
 .services-card__title--cta { /* Styles for CTA card title variation */
     font-size: 1.6rem; /* Larger title for CTA card */
-    color: #48a1fc; /* Blue color for title - #48a1fc */ /* Original: #333; */
+    color: #48a1fc; /* Blue color for title */
     margin-top: 0;
-    margin-bottom: 10px; /* Add margin below title */ /* Original padding: 15px 20px 5px 20px; */
+    margin-bottom: 10px; /* Margin below title */
     font-weight: bold; /* Make title bold */
 }
 
@@ -90,22 +91,21 @@
     color: #555;
     margin-bottom: 20px;
     line-height: 1.5;
-    min-height: 60px; /* Defina uma altura mínima - ajuste este valor conforme necessário */
-    /* overflow-y: auto;  (Opcional) Para adicionar scroll se o texto exceder a altura */
+    min-height: 60px; /* Minimum height for description */
 }
 
-.services-card__price { /* Price styles remain same, adjust if needed */
+.services-card__price { /* Price styles - hidden for CTA style */
     font-size: 1.2rem;
     font-weight: bold;
-    color: #333; /* Keeping price color as is for now, can adjust if needed */
+    color: #333;
     padding: 15px 20px;
     margin: 0;
-    display: none; /* Hide price for this CTA card style */
+    display: none; /* Hide price for CTA card style */
 }
 
 
 .services-card__button--cta {
-    background-color: #48a1fc; /* Cor azul original do botão de serviço */
+    background-color: #48a1fc; /* Service button blue color */
     color: #fff;
     font-size: 1.1rem;
     padding: 12px 25px;
@@ -117,18 +117,18 @@
     align-items: center;
     gap: 8px;
     margin-bottom: 20px;
-    animation: pulse-glow 2s infinite; /* Adicionando a animação pulse-glow */
+    animation: pulse-glow 2s infinite; /* Pulse glow animation */
 }
 
 @keyframes pulse-glow {
     0% {
-        box-shadow: 0 0 0 0 rgba(72, 161, 252, 0.4); /* Azul - Cor do botão de serviço com alpha */
+        box-shadow: 0 0 0 0 rgba(72, 161, 252, 0.4); /* Service button color with alpha */
     }
     70% {
-        box-shadow: 0 0 0 10px rgba(72, 161, 252, 0); /* Azul - Cor do botão de serviço com alpha 0 */
+        box-shadow: 0 0 0 10px rgba(72, 161, 252, 0); /* Service button color with alpha 0 */
     }
     100% {
-        box-shadow: 0 0 0 0 rgba(72, 161, 252, 0); /* Azul - Cor do botão de serviço com alpha 0 */
+        box-shadow: 0 0 0 0 rgba(72, 161, 252, 0); /* Service button color with alpha 0 */
     }
 }
 
@@ -162,65 +162,29 @@
 }
 
 .services-pagination__dot--active {
-    background-color: #accc45; /* Active dot color - Green #accc45 */
+    background-color: #accc45; /* Active dot color - Green */
     transform: scale(1.2); /* Slightly larger active dot */
 }
 
 
-.services-navigation {
-    display: flex;
-    justify-content: center; /* Centralizar botões */
-    gap: 15px; /* Espaçamento entre os botões */
-    margin-top: 20px;
-    display: none; /* Hide navigation buttons as requested */
-}
-
-.services-nav-button {
-    background-color: #ddd; /* Cor de fundo dos botões */
-    color: #333;
-    border: none;
-    border-radius: 50%; /* Deixar botões circulares */
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s ease; /* Transição suave no hover */
-}
-
-.services-nav-button:hover {
-    background-color: #ccc; /* Cor de fundo mais clara no hover */
-}
-
-
 /* Responsiveness for Services Section */
-@media (max-width: 1200px) { /* Breakpoint for responsiveness - adjust as needed */
-    .services-card--cta {
-        width: calc(50% - 7.5px); /* 2 cards in a row on medium screens */ /* width: calc(33.33% - 10px); */
-    }
-    .services-carousel {
-        width: calc(2 * (320px + 15px) ); /* Width to fit 2 cards + gaps on medium screens */
-    }
-}
 
 
-@media (max-width: 768px) { /* Mobile breakpoint */
+@media (max-width:  1200px) { /* Mobile breakpoint */
     .services-section {
-        padding: 40px 0; /* Less padding on mobile */
+        padding: 30px 0; /* Reduced padding on mobile */
     }
     .services-carousel {
         padding-left: 0; /* Remove side padding on mobile */
         padding-right: 0;
-        gap: 10px; /* Further reduce gap on mobile */
-        width: auto; /* Reset width to auto for mobile to take full width */
+        gap: 20px; /* Gap between stacked cards on mobile */
+        width: auto; /* Auto width for mobile */
         flex-direction: column; /* Stack cards vertically on mobile */
         align-items: center; /* Center items in column layout */
     }
     .services-card--cta {
-        width: 90%; /* Full width cards on mobile, or adjust as needed */
-        max-width: 400px; /* Max width for mobile cards if needed */
+        width: 95%; /* Wider cards on mobile */
+        max-width: 500px; /* Increased max-width for mobile cards */
         margin-left: auto; /* Center cards on mobile */
         margin-right: auto;
     }
@@ -228,20 +192,21 @@
         padding: 0; /* Remove container side padding on mobile */
     }
     .services-title {
-        font-size: 2rem; /* Smaller title on mobile */
-        margin-bottom: 30px; /* Less margin below title on mobile */
+        font-size: 1.8rem; /* Smaller title on mobile */
+        margin-bottom: 25px; /* Less margin below title on mobile */
     }
     .services-card__title--cta {
-        font-size: 1.4rem; /* Smaller title in card on mobile */
+        font-size: 1.3rem; /* Smaller card title on mobile */
     }
     .services-card__description--cta {
-        font-size: 0.9rem; /* Smaller description text on mobile */
+        font-size: 0.95rem; /* Slightly smaller description on mobile */
+        min-height: auto; /* Adjust min-height for mobile */
     }
     .services-card__button--cta {
-        font-size: 1rem; /* Smaller button text on mobile */
-        padding: 10px 20px; /* Smaller button padding on mobile */
+        font-size: 0.9rem; /* Smaller button text on mobile */
+        padding: 10px 15px; /* Smaller button padding on mobile */
     }
-    .services-pagination { /* Center pagination on mobile */
-        margin-top: 30px; /* Add more margin above pagination on mobile */
+    .services-pagination { /* Adjust pagination for mobile */
+        margin-top: 25px; /* Adjust margin above pagination on mobile */
     }
 }

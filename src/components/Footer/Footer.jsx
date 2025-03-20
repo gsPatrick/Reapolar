@@ -27,20 +27,21 @@ function Footer() {
                 <div className="footer__column footer__column--product">
                     <h4 className="footer__column-title">Serviços</h4>
                     <ul className="footer__list">
-                        <li><a href="#" className="footer__link">Limpeza de Sofás</a></li>
-                        <li><a href="#" className="footer__link">Limpeza de Cadeiras</a></li>
-                        <li><a href="#" className="footer__link">Limpeza de Colchões</a></li>
-                        <li><a href="#" className="footer__link">Limpeza de Poltronas</a></li>
-                        <li><a href="#" className="footer__link">Limpeza de Tapetes</a></li>
+                        <li><a href="#servicos" className="footer__link">Limpeza de Sofás</a></li>
+                        <li><a href="#servicos" className="footer__link">Limpeza de Cadeiras</a></li>
+                        <li><a href="#servicos" className="footer__link">Limpeza de Colchões</a></li>
+                        <li><a href="#servicos" className="footer__link">Limpeza de Poltronas</a></li>
+                        <li><a href="#servicos" className="footer__link">Limpeza de Tapetes</a></li>
                     </ul>
                 </div>
 
                 <div className="footer__column footer__column--company">
                     <h4 className="footer__column-title">Empresa</h4>
                     <ul className="footer__list">
-                        <li><a href="#" className="footer__link">Sobre Nós</a></li>
-                        <li><a href="/contact" className="footer__link">Contato</a></li>
-                        <li><a href="#" className="footer__link">Blog</a></li>
+                        <li><a href="#WhatsAppCTA" className="footer__link">Sobre Nós</a></li>
+                        <li><a href="#WhatsAppCTA" className="footer__link">Contato</a></li>
+                        <li><a href="#NewsLetterCTA" className="footer__link">Cupom</a></li>
+
                     </ul>
                 </div>
 

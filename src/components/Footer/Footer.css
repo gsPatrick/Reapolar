@@ -199,4 +199,9 @@
             align-items: center;
     }
 
+    .footer__bottom-container{
+        display: flex;
+        flex-direction: column;
+    }
+
 }

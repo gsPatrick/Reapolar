@@ -62,24 +62,27 @@
 
 @media (max-width: 768px) { /* Mobile breakpoint */
     .features-section {
-        padding: 30px 0; /* Even less padding on mobile */ /* Original: 40px 0; */
+        padding: 20px 0; /* Ainda menos padding no mobile */
     }
     .features-container {
-        padding: 0 15px; /* Adjust container padding on mobile */
+        padding: 0 10px; /* Menos padding container no mobile */
+        flex-direction: column; /* Alinha os itens verticalmente em mobile */
+        align-items: center; /* Centraliza os itens em mobile */
     }
     .feature-item {
-        max-width: 100%; /* Full width on mobile */
-        padding: 15px; /* Less padding on mobile items */ /* Original: 20px; */
-        margin-bottom: 20px;
+        max-width: 100%; /* Full width no mobile */
+        padding: 10px; /* Menos padding nos itens mobile */
+        margin-bottom: 15px; /* Menos margin bottom nos itens mobile */
     }
     .feature-item__icon {
-        font-size: 2rem; /* Smaller icon on mobile */
-        margin-bottom: 10px;
+        font-size: 1.8rem; /* Icone menor no mobile */
+        margin-bottom: 8px; /* Menos margin no icone mobile */
     }
     .feature-item__title {
-        font-size: 1rem; /* Even smaller title on mobile */ /* Original: 1.1rem; */
+        font-size: 0.95rem; /* Titulo ainda menor no mobile */
+        margin-bottom: 6px; /* Menos margin no titulo mobile */
     }
     .feature-item__description {
-        font-size: 0.9rem; /* Description size remains same on mobile */ /* Original: 0.95rem; */
+        font-size: 0.85rem; /* Descrição menor no mobile */
     }
 }

@@ -178,7 +178,7 @@
 /* Responsiveness for WhatsApp CTA Section */
 @media (max-width: 768px) { /* Mobile breakpoint */
     .whatsapp-cta-section--split {
-        padding: 50px 0; /* Adjust vertical padding on mobile */
+        padding: 30px 0; /* Mais reduzido padding vertical no mobile */
         text-align: center; /* Center text on mobile */
     }
     .whatsapp-cta-container--split {
@@ -187,58 +187,65 @@
         align-items: center; /* Center items on mobile */
     }
     .whatsapp-cta-image-container {
-        max-width: 90%; /* Further limit image width on mobile */
+        max-width: 100%; /* Imagem ocupa a largura total no mobile */
         padding-right: 0; /* Remove right padding on mobile image */
-        margin-bottom: 25px; /* Increased margin below image on mobile */
+        margin-bottom: 20px; /* Reduzido margin abaixo da imagem no mobile */
     }
     .whatsapp-cta-image {
-        border-radius: 15px; /* More rounded corners for mobile image */
+        border-radius: 12px; /* Mais arredondado para mobile image */
     }
     .whatsapp-cta-content--centered {
         max-width: 100%; /* Content takes full width on mobile */
         padding-left: 0; /* Remove left padding on mobile content */
         text-align: center; /* Center text in content on mobile */
+        align-items: center; /* Centraliza os itens horizontalmente */
     }
     .whatsapp-cta-label { /* Center label on mobile */
         text-align: center;
-        font-size: 0.95rem; /* Slightly larger label font on mobile */
+        font-size: 0.85rem; /* Label font ainda menor no mobile */
+        margin-bottom: 6px; /* Mais reduzido margin abaixo do label no mobile */
     }
 
     .whatsapp-cta-title--centered {
-        font-size: 2rem; /* Slightly smaller title on mobile */
-        margin-bottom: 15px; /* Reduced spacing below title on mobile */
+        font-size: 1.6rem; /* Titulo ainda menor no mobile */
+        margin-bottom: 10px; /* Mais reduzido margin abaixo do titulo no mobile */
         text-align: center; /* Center title on mobile */
     }
     .whatsapp-cta-benefits--centered {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 30px; /* Spacing for benefits list remains same on mobile */
+        display: block; /* Mudado para block para centralizar itens */
+        text-align: center; /* Centraliza o texto da lista */
+        margin-bottom: 20px; /* Mais reduzido margin abaixo da lista no mobile */
     }
     .whatsapp-cta-benefit-item {
-        font-size: 1rem; /* Benefit item size remains same on mobile */
-        margin-bottom: 8px; /* Reduced spacing below benefit item on mobile */
+        font-size: 0.9rem; /* Benefit item size ainda menor no mobile */
+        margin-bottom: 5px; /* Mais reduzido margin abaixo do item no mobile */
+        line-height: 1.4; /* Linha ainda menor no mobile */
     }
     .whatsapp-cta-link--centered {
-        flex-direction: row; /* Revert to row layout for button on mobile if desired */
-        padding: 12px 25px; /* Reduced padding for mobile button */
-        font-size: 1rem; /* Smaller button text on mobile */
-        margin-top: 25px; /* Reduced margin above button on mobile */
-        border-radius: 40px; /* More rounded button on mobile */
+        flex-direction: row; /* Mantido row layout para botão mobile */
+        padding: 8px 16px; /* Ainda mais reduzido padding para botão mobile */
+        font-size: 0.85rem; /* Botão texto ainda menor no mobile */
+        margin-top: 15px; /* Mais reduzido margin acima do botão no mobile */
+        border-radius: 25px; /* Mais arredondado botão no mobile */
+        margin-left: auto; /* Centraliza o botão */
+        margin-right: auto; /* Centraliza o botão */
+        display: flex; /* Garante que é flex para o auto margin funcionar */
+        justify-content: center; /* Centraliza o conteúdo do botão caso necessário */
+
     }
     .whatsapp-cta-text {
-        text-align: left; /* Revert text alignment to left for button text */
+        text-align: left; /* Mantido text alignment left para texto do botão */
     }
     .whatsapp-cta-icon--animated {
-        margin-right: 15px; /* Add right margin back to icon for button on mobile */
+        margin-right: 8px; /* Ainda mais reduzido margin para icone no mobile */
         margin-bottom: 0; /* Remove bottom margin on mobile icon */
-        font-size: 2rem; /* Icon size remains same on mobile */
+        font-size: 1.6rem; /* Icone ainda menor no mobile */
     }
 
     .whatsapp-cta-message--animated {
-        font-size: 1.1rem; /* Smaller message text on mobile */
+        font-size: 0.9rem; /* Mensagem ainda menor no mobile */
     }
     .whatsapp-cta-number {
-        font-size: 0.9rem; /* Number hint text size remains same on mobile */
+        font-size: 0.8rem; /* Number hint text size ainda menor no mobile */
     }
 }

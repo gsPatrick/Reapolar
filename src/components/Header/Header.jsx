@@ -24,11 +24,6 @@ function Header() {
                 <nav className={`header__nav ${isMenuOpen ? 'header__nav--open' : ''}`}>
                     <ul className="header__nav-list">
                         <li className="header__nav-item">
-                            <a href="/" className="header__nav-link">
-                                Home
-                            </a>
-                        </li>
-                        <li className="header__nav-item">
                             <a href="#WhatsAppCTA" className="header__nav-link">
                                 Sobre
                             </a>
@@ -41,6 +36,11 @@ function Header() {
                         <li className="header__nav-item">
                             <a href="#WhatsAppCTA" className="header__nav-link">
                                 Contato
+                            </a>
+                        </li>
+                        <li className="header__nav-item">
+                            <a href="#NewsLetterCTA" className="header__nav-link">
+                                Cupom
                             </a>
                         </li>
                     </ul>
