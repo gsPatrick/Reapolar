@@ -210,6 +210,9 @@
         text-align: center; /* Center title on mobile */
     }
     .whatsapp-cta-benefits--centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-bottom: 30px; /* Spacing for benefits list remains same on mobile */
     }
     .whatsapp-cta-benefit-item {

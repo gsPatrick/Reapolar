@@ -174,6 +174,7 @@
         text-align: center; /* Center text in columns on mobile */
     }
     .footer__column {
+        margin-inline: 0px !important;
         max-width: 100%; /* Allow full width for columns on mobile */
         text-align: center; /* Re-center text in columns for mobile */
         margin-bottom: 40px; /* Increased spacing between columns on mobile */
@@ -188,4 +189,14 @@
         text-align: center; /* Center developer text on mobile */
         animation-delay: 0s; /* Remove delay no mobile para ser mais responsivo */
     }
+
+    .footer__list{
+        display: flex
+        ;
+            list-style: none;
+            padding: 0;
+            flex-direction: column;
+            align-items: center;
+    }
+
 }

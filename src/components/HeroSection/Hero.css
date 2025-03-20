@@ -115,7 +115,7 @@
 @media (max-width: 768px) {
     .hero {
         padding: 60px 0;
-        height: auto; /* Reset fixed height on mobile for content to dictate height */
+        height: auto !important;
     }
     .hero__container {
         padding-top: 60px; /* Add padding to container to keep content within viewport */
