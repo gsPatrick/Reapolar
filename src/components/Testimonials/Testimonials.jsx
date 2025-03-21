@@ -7,26 +7,34 @@ function Testimonials() {
     // Mock data for testimonials cards - based on "Clientes Felizes, Resultados Reais"
     const testimonialsData = [
         {
-            name: "Ana Clara",
+            name: "Ismael Cabrera Martin",
             role: "Cliente Residencial", // or similar role relevant to your audience
-            quote: "Meu sofá ficou irreconhecível! Serviço incrível, rápido e eficiente.",
+            quote: "Eu tinha contratado outra pessoa, me fez gastar com um novo pressurizador de água porque esse era para ele o problema, mas não resolvou o problema com o novo pressurizador (ainda acionava sozinho por algum vazamento). Então liguei para Reparo Lar e o técnico achou o problema de vazamento, era algo simples, mas só ele para achar o problema. Agora podemos dormir tranquilo sem escutar o pressurizador. Obrigado!",
             rating: 5, // Star rating out of 5
-            image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Placeholder image - adjust size and colors if needed
+            image: "https://lh3.googleusercontent.com/a-/ALV-UjWjiWH_vlvaYL5c7cGRxzW-RS-QqjUGdVFuYH5Wxk5zDuyxwGRu=w75-h75-p-rp-mo-br100" // Placeholder image - adjust size and colors if needed
         },
         {
-            name: "Lucas Andrade",
+            name: "Ivo Guilhon - WILD HOGS PROJÉTEIS ESPECIAIS",
             role: "Cliente Residencial", // or similar role
-            quote: "Vale cada centavo. Melhor decisão que tomei para minha casa!",
+            quote: "Fui muito bem atendido, recomendo a empresa, achou os malditos vazamentos que tanto me atormentavam , tem equipamentos adequados para localizar e o que tive que quebrar foi minimo, recomendo",
             rating: 5, // Star rating out of 5
-            image: "https://images.unsplash.com/photo-1614023342667-6f060e9d1e04?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Placeholder image - adjust size and colors if needed
+            image: "https://lh3.googleusercontent.com/a-/ALV-UjWqfaLc4FyaC6Ex5hs5cJajhFPJrNbPyiBSMMumeDjQxINnYhg=w75-h75-p-rp-mo-br100" // Placeholder image - adjust size and colors if needed
         },
         {
-            name: "Mariana Silva",
+            name: "Mauricio De Conti Carvalho",
             role: "Cliente Residencial", // or similar role
-            quote: "Excelente! Meus estofados parecem novos, e o atendimento foi ótimo.",
-            rating: 4, // Example of a 4-star rating
-            image: "https://images.unsplash.com/photo-1614436201459-156d322d38c6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Placeholder image - adjust size and colors if needed
-        }
+            quote: "Excelente atendimento, a empresa possui ótimas ferramentas e tecnologia para localizar infiltrações e vazamentos sem quebra-qubta. Sou sindico profissional e indico para todos.",
+            rating: 5, // Example of a 4-star rating
+            image: "https://lh3.googleusercontent.com/a-/ALV-UjUJUwTw67c0UoilFIY90Yizs6M5uODBa_FOe2eckiymW_CHacgrdw=w75-h75-p-rp-mo-ba2-br100" // Placeholder image - adjust size and colors if needed
+        },
+        {
+            name: "Tatiana Mendes",
+            role: "Cliente Residencial", // or similar role
+            quote: "Melhor profissional. O atendimento e a vistoria foram perfeitas, além de um relatório explicativo e com o apontamento do que deve ser corrigido.",
+            rating: 5, // Example of a 4-star rating
+            image: "https://lh3.googleusercontent.com/a/ACg8ocJR8XJDWKP4WDYDbTx8nAL4h6EyPy74rpK2oLhalxsN5sH0Fw=w75-h75-p-rp-mo-br100" // Placeholder image - adjust size and colors if needed
+        },
+        
         // You can add more testimonials here following the same structure
     ];
 
