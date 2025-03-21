@@ -11,7 +11,7 @@ function WhatsAppCTA() {
             <div className="container whatsapp-cta-container whatsapp-cta-container--split">
                 <div className="whatsapp-cta-image-container">
                     <img
-                        src="https://i.imgur.com/Qw50xhh.jpeg" // Reduced image size to 600x600
+                        src="https://i.imgur.com/jZgspMv.png" // Reduced image size to 600x600
                         alt="Imagem Chamada para Ação"
                         className="whatsapp-cta-image"
                     />
